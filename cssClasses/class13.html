@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 13</title>
+    <style>
+        *{
+            margin: 0;
+        }/*  the universal selector is asterix (*) */
+        :root{
+            --mainBlue:rgb(35, 55, 152, 0.6);
+            --primaryTextColor: rgba(38, 38, 38 0.886);
+            --secondaryTextColor: rgba(114, 105, 105, 0.886);
+            --mainFont: "Epilogue", serif;
+            --brandYellow:rgb(191,179, 5);
+            --brandRed:rgb(242, 87, 10);
+            --brandGreen:rgb(11, 235, 8);
+        }
+        header{
+            background-color: var(--mainBlue);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            justify-content: space-between;
+
+        }
+        nav a{
+            text-decoration: none;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 800;
+            color: var(--primaryTextColor);
+            margin: 5px;
+        }
+        nav a:hover{
+            border-bottom: 2px solid grey;
+            /* background-color:; */
+        } 
+        nav a{
+            border-radius: 5px;
+            background-color: var(--brandYellow);
+            /* margin-right: 10%; */
+        }
+        button{
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+            color: wheat;
+            text-align: center;
+            background-color: var(--brandGreen);
+        }
+        nav a:nth-child(2){
+            color: brown;
+        }
+        /* this :nth-child() is choosing  a particular child or content of an element and styling it without using a div for each of them */
+        button:hover{
+            background-color: azure;
+        }
+        header h1{
+            color: var(--brandGreen);
+        }
+        header h1 span{
+            color: var(--brandRed);
+        }
+        main h1{
+            color:var(--primaryTextColor);
+        }
+        main p{
+            color: var(--primaryTextColor);
+        }
+        main a{
+            text-decoration: none;
+            background-color: var(--brandGreen);
+            padding: 8px;
+            margin-top: 15px;
+        }
+        main{
+            font-family: var(--mainFont);
+            text-align: center;
+            background-color: lavender;
+        }
+    </style>
+</head>
+<body>
+     <!--Css variables:
+     The var() funtion is used to insert the value of a css variable. A css variable can be be of local or global scope.
+     The variable name must be gin with two dashes (--) and it is case sensitive.
+     Global scope variables can be accessed throughout the entire document. to create a variable with a global scope, we declare it inside the :root selector -->
+     <header>
+        <h1><span>Mr</span>SOFT</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </nav>
+        <div class="auth">
+            <button>Login</button>
+            <button>Sign In</button>
+        </div>
+     </header>
+     <main>
+        <h1>Welcome To MRSoft</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+             Magni quas quasi dolorem, ad eum ab tempore repellat rem unde, sunt maxime libero? Aliquid quos maxime quo suscipit voluptatibus, non, sit voluptates officiis necessitatibus, labore omnis earum laborum. Repudiandae nemo laboriosam, enim sit, quasi facere autem hic velit, praesentium cupiditate ipsum!</p>
+             <br>
+        <a href="">Get Started Now</a>
+     </main>
+       <!-- BOX-SIZING 
+        IN CSS THE box-sizing property is used to define how the width and height of an element are calculated. It determines whether paddin and borders are included in the elements total width and height 
+        Content-box; is the default value . here only the contents width and height are considered.
+        Border-box: the padding and border are included inside the width  and height, this means that the curent size is reduced to make space for the padding and borders-->
+        <div style="box-sizing: content-box; width: 200px;height: 200px; padding: 20px; background-color: bisque; border: 10px solid brown;">
+            <p>
+                This shows content box
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis similique odio est veniam neque dicta error laboriosam reprehenderit inventore eius impedit deleniti numquam perferendis vero modi dolorem necessitatibus, recusandae doloribus maxime tempora dignissimos non. Eveniet sit dolore ipsum cumque sed dolorum voluptatum possimus commodi aspernatur, neque non debitis cupiditate? Quos?
+            </p>
+        </div><br>
+        <div style="box-sizing: border-box; width: 200px;height: 200px; padding: 20px; background-color: bisque; border: 10px solid brown;">
+            <p>
+                This shows border box
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis similique odio est veniam neque dicta error laboriosam reprehenderit inventore eius impedit deleniti numquam perferendis vero modi dolorem necessitatibus, recusandae doloribus maxime tempora dignissimos non. Eveniet sit dolore ipsum cumque sed dolorum voluptatum possimus commodi aspernatur, neque non debitis cupiditate? Quos
+            </p>
+        </div>
+</body>
+</html>

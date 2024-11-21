@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Summary Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            display: flex;
+            justify-content: center;  
+            align-items: center; 
+            background-color: #f0f0f0; 
+            font-family: "Hanken Grotesk", sans-serif;
+            font-optical-sizing: auto;  
+            font-style: normal;
+        }
+        .everything{
+            display: flex;
+            position: relative;
+            box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1); 
+            /* overflow: hidden; */
+        }
+        .left{
+            width: 300px; /* Width of the left box */
+            height: 400px; /* Height of the left box */
+            background-image:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)); /*this is gradient of two colours */
+            border-radius: 20px; 
+            padding: 20px;
+            justify-content: center;
+            display: flex;
+            flex-direction: column; /* Stack vertically*/
+            align-items: center; /*  Center horizontally */
+            position: relative; /* Position relative for overlapping */
+            }
+        .right{
+            padding: 20px;
+            box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            width: 300px; /* Width of the right box */
+            height: 400px; /* Height of the right box */
+            margin-left: -10px; /* Move left to create overlap */
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: -10px;
+            color: hsl(241, 100%, 89%);
+        }
+        .circle{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+        .main{
+            font-size: 50px;
+            color: hsl(0, 0%, 100%);
+            font-weight: 700;
+        }
+        .sub{
+            font-size: 14px;
+            color: hsl(241, 100%, 89%);
+            font-weight: 800;
+        }
+        .great{
+            font-size: 30px;
+            font-weight: 700;
+            color:hsl(221, 100%, 96%);
+            margin-bottom: 10px;
+        }
+        .text{
+            text-align: center;
+            font-weight: 500;
+            color: hsl(241, 100%, 89%);
+        }
+        h3 {
+            font-size: 20px;
+            margin-top: -10px;
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+        .summary.items {
+            display: flex;
+            flex-direction: column;   /* Stack items vertically */
+            gap: 10px;
+            padding-left: 15px;
+        }
+        .summary-item i{
+            margin-right: 10px;
+            font-size: 18px;
+        
+        }
+        .summary-item {
+            padding: 15px;
+            background-color: #4CAF50; /* Green background color */
+            display: flex;/* Use flexbox for layout */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .cont{
+            padding: 15px 5px;
+            background-color: hsl(224, 30%, 27%);
+            color: white; 
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            width: 90%;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .cont:hover{
+            background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+        }
+        .score{
+            color: black;
+            margin-left: auto;
+            font-weight: 600;
+            }
+        .red{
+            color: hsl(0, 100%, 67%);
+            background-color: hsla(0, 100%, 67%,0.15);
+        }
+        .yellow{
+            color: hsl(39, 100%, 56%);
+            background-color: hsla(39, 100%, 56%,0.15);
+        }
+
+        .green{
+            color:hsl(166, 100%, 37%);
+            background-color: hsla(166, 100%, 37%,0.15);
+        }
+
+        .blue{
+            color: hsl(234, 85%, 45%);
+            background-color: hsla(234, 85%, 45%,0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a class for everything, the left and the right -->
+    <div class="everything">
+        <div class="left">
+            <h2>Your result</h2>
+            <div class="circle"> 
+                <span class="circle main">76</span><br>
+                <span class="circle sub">of 100</span>
+            </div>
+            <p class="great">Great</p>
+            <p class="text">You scored higher than 65% of<br>the people who have taken<br>these tests.</p>
+        </div>
+        <div class="right">
+                <h3>Summary</h3>
+                <div class="summary items">
+                    <div class="summary-item red">
+                        <i class="fa-regular fa-bolt"></i>
+                        Reaction<span class="score">80 <span style="color: grey;"> / 100</span></span>
+                    </div>
+                    <div class="summary-item yellow">
+                        <i class="fa-regular fa-brain"></i>
+                        Memory<span class="score">92 <span style="color: grey;"> / 100</span></span>
+                    </div>
+                    <div class="summary-item green">
+                        <i class="fa-regular fa-comment"></i>
+                        Verbal<span class="score">61 <span style="color: grey;"> / 100</span></span>
+                    </div>
+                    <div class="summary-item blue">
+                        <i class="fa-regular fa-eye"></i>
+                        Visual<span class="score">72 <span style="color: grey;"> / 100</span></span>
+                    </div>
+                </div>
+                <button class="cont">Continue</button>
+        </div> 
+    </div>
+</body>
+</html>

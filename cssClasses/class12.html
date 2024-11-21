@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            /* this has the lowest specificity value because its talking to all elements, the more specific an element is the more the specificity value */
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+
+        }
+        .green{
+            background-color: green;
+            position: relative;
+            z-index: 3;
+            /* in order for z index to work you have to use position: relative; */
+        }
+        .blue{
+            background-color: blue;
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            
+        }
+        .red{
+            background-color: red;
+            position: relative;
+            bottom: 100px;
+            left: 30px;
+            z-index: 4;
+            /* it'll overlap green because it has a higher z-index:  */
+        }
+        #para::first-letter{
+            font-size: 70px;
+            font-weight: 800;
+            
+        }
+        #para::first-line{
+            font-size: 45px;
+            color: green;
+            font-style: italic;
+            font-weight: 700;
+        }
+        #ex2{
+            background-color: lavender;
+            padding-left: 40%;
+            position: relative;
+            z-index: -3;
+            font-size: 18px;
+            color: yellow;
+            font-weight: 700;
+        
+        }
+        #ex2 img{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .orange{
+            background-color: orange;
+            float: right;
+
+        }
+        .purple{
+            background-color: purple;
+            float: left;
+        }
+        .para{
+            background-color: blanchedalmond;
+        }
+        .para img{
+            float: right;
+        }
+        /* CSS Specificity- If two css selectors point to the same elemenent, the selector with the higher specificity value would be applied.Every CSS selector has its place in its specificity hierachy. There are four categories which define the level or precedence
+        1) Inline Styles - E.g; <h1 style="color: pink"> 
+        2) ID's- #navbar specificity value (+100)
+        3) classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href] specificity value(+10)
+        4) Elements and pseudo elements - Example: h1, before specificity value(+1)
+        
+        How to calculate specificity: EXAMPLES
+        .para{} - sv =10
+        .para img{} - sv =11
+        h3{} - sv=1
+        */
+    </style>
+</head>
+<body>
+    <h2> Css Z-INDEX,Float, Specificity & Dropdown</h2>
+    <!-- the Z-INDEX specifies the layer order of elements making them able to overlap and under lap other elements -->
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    
+    <div id="ex2">
+        <p id="para">
+            I Love Jesus<br>
+            How aare you today?<br>
+            See you tomorrow! <br>
+        </p>
+        <img src="./images/lol.jpg" alt="" width="240px" height="120px">
+    </div>
+    <h3>CSS Float Property</h3>
+    <!-- The css float property is used for positioning and formatting content to the left or right majorly -->
+     <div class="box orange">
+        <h2>Float Right</h2>
+     </div>
+     <div class="box purple">  <h2>Float Left</h2></div>
+     <p class="para">
+        I Love Jesus<br>
+        How are you today?<br>
+        <img src="./images/lol.jpg" alt="" width="240px" height="120px">
+        See you tomorrow! <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat veritatis sint asperiores. Magnam maxime, placeat eius ea odio cumque expedita, debitis, nesciunt animi quas cum totam? Vitae aut placeat quisquam quibusdam dolores nulla quasi fuga, atque at, nisi eos ratione culpa eaque quae eum hic enim suscipit! Tempora, doloribus molestiae vitae repudiandae quaerat ullam deleniti nihil consectetur quisquam enim facilis.
+    </p>
+    
+
+</body>
+</html>

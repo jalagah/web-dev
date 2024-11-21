@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        input{
+            padding: 5px 30px;
+            border: 1px solid black;
+        }
+        button{
+            padding: 5px 30px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        .right{
+            background-image: url(./images/bg-curve-desktop.svg);
+            padding: 20px;
+            height: 200px;
+            width: 1200px;
+            border-radius: 10px;
+            margin-top: 40px;
+            display: inline-block;
+        }
+        .last{
+            padding: 10px 10px;
+            width: 350px;
+            height: 170px;
+            border: 3px solid lavender;
+            border-radius: 10px;
+            background-color: white;
+            margin-left: 2%; 
+        }
+        .bluebox{
+            display: inline-block;
+            color: white;
+            width: 100%;
+            height: 100%;
+            background-color: hsl(238, 22%, 44%)
+        }
+        .bluebox input{
+            float: right;
+            margin-right: 300px;
+            padding: 10px 15x;
+        }
+        .bluebox label{
+            float: right;
+            margin-right: 340px;
+        }
+        .bluebox button{
+            float: inline-end;
+            margin-bottom: 50px;
+            margin-right: 340px;
+        }
+        h3{
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+        .text2{
+            padding-bottom: 20px;
+            padding-left: 30px;
+        }
+        .box2{
+            background-color: hsl(243, 87%, 12%);
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            margin-left: 20px;
+        }
+        .blue a{
+            text-decoration: none;
+            margin-left: 400px;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            color: white;
+        }
+        .new{
+            text-decoration: none;
+            margin-left: 700px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    </style>
+        
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./images/logo.svg" alt="">
+        </div>
+        <nav>
+            <a href="#">Features</a>
+            <a href="#">Team</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+    <div class="left box">
+        <img src="./images/illustration-1.svg" alt="" style="width: 200px;height: 200px;float: right;">
+        <span>
+        <h2>All your files in one secure <br> location, accessible anywhere.</h2>
+        <p>Fylo stores you most important files in one secure location. Access <br> them wherever you need, share and collaborate with friends, family, <br> and co-workers.
+        </p>
+        </span>
+        <input type="text" placeholder="Enter your email"> <button>Get Started</button> <br>
+        <label for="">Please check your email</label>
+    </div> <br> <br> <br>
+    <div class="right box">
+        <img src="./images/illustration-2.svg" alt="" style="width: 200px;height: 200px;float: inline-end;">
+        <h1>Stay productive,wherever you are</h1>
+        <div>
+            <p>Never let location be an issue when accesing your files.Flyo has you <br> covered for all your storage needs. <br> securely shares files and folders with friends, family and colleaques for <br> live collaboration.No email attachments required!
+            </p>
+        </div>
+        <a href="#">See how it works</a>
+    </div>
+    <div class="last">
+        <p>
+            <img src="./images/icon-quotes.svg" alt="" style="width: 10px; margin-top: auto;"> <br>
+            Flyo has improved our team productivity by an order of magnitude.Since making the switch our team has <br> become a well oiled collaboration machine
+        </p>
+        <img src="./images/avatar-testimonial.jpg" alt="" style="height: 30px; width: 30px; border-radius: 50%; margin-left: 10px;">
+        <span style="color: black;font-size: small;">Klye Berton</span> <br><span style="color: gray; margin-left: 5%; font-size: small; margin-bottom: 10%;">Founder & Ceo Huddle</span>
+    </div>
+    <div class="bluebox">
+        <h3>Get Early Access today</h3>
+        <label for="">Please check your email</label> <br>
+        <input type="text"> <br>
+        <p class="text2">
+            It only takes a minute to signup and our free starter tier is <br> exteremely generious. If you have any questions, our support team <br> would be happy to help you.
+            <button>Get Started</button>
+        </p>
+    </div><br>
+    <div class="box2">
+        <img src="./images/logo.svg" alt="" style="margin-top: 10px; margin-left: 20px;"><br>
+        <img src="./images/icon-phone.svg" alt=""><span style="color: white; margin-left: 20px"> Phone +234 7060430103</span><br>
+        <img src="./images/icon-email.svg" alt=""><span style="color: white; margin-left: 20px;">Email crayjesse@gmail.com</span><br>
+        <span class="blue a">
+            <a href="#">About us</a><br>
+            <a href="#">Jobs</a><br>
+            <a href="#">Press</a><br>
+            <a href="#">Blog</a>
+        </span>
+        <div class="new">
+            <a href="#">Contact Us</a><br>
+            <a href="#">Terms</a><br>
+            <a href="#">Privacy</a>
+        </div>
+    </div>
+        
+</body>
+</html>

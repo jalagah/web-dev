@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes and element</title>
+    <style>
+      #class28tn{
+        font-size: 20px;
+        font-weight: 800;
+        color: yellow;
+      }
+      #class48tn:visited{
+        font-size: 20px;
+        font-weight: 800;
+        color: green;
+      }
+       /* A Pseudo element is used to style specified parts of an element. e.g a placeholder, the first line or letter, a selected part */
+      input::placeholder{
+        color: gray;
+        font-size: 20px;
+      }
+      /* input::content{ */
+        /* color: brown; */
+/* A Pseudo class is used to define a special state of an element, e.g to style an element when a user mouses over it (:hover), or visits a link(:visited) or is
+      currently on a link(:active) or is currently entering an input */
+      input:focus{
+        background-color: aliceblue;
+        padding: 10px;
+        outline: none;
+        border: none;
+      }
+     
+    
+    </style>
+</head>
+<body>
+    <!-- A Pseudo class is used to define a special state of an element, e.g to style an element when a user mouses over it (:hover), or visits a link(:visited) or is
+      currently on a link(:active) or is currently entering an input -->
+    <a  href="#" id="class28tn">Go to class 2</a>
+    <a  href="#3" id="class38tn">Go to class 2</a>
+    <a  href="#23" id="class48tn">Go to class 2</a><br>
+    <input type="text" placeholder="search">
+    <p id-="para">
+      I Love You<br>
+
+    </p>
+</body>
+</html>

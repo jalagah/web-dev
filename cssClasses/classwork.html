@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator project</title>
+    <style>
+        body{
+            background-color: lavender;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .calculator{
+            display: flex;
+            flex-direction: column;
+        }
+        .calculator input{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: aliceblue;
+            padding: 40px;
+        }
+        .keys{
+            background-color: darkslategray;
+            display: inline-grid;
+            grid-template-columns: repeat(4,100px);
+            grid-template-rows: 100px 100px 100px 100px;
+            gap: 30px;
+            /* column-gap: 30px; */
+            /* row-gap: 1px; */
+            /* border: 1px; */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .key{
+            background-color: grey;
+            width: 70px;
+            height: 70px;
+            border: 3px solid black;
+            border-radius: 50%;
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .function{
+            background-color: orange;
+            width: 70px;
+            height: 70px;
+            border: 3px solid black;
+            border-radius: 50%;
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .function:hover{
+            background-color: yellow;
+        }
+        .key:hover{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator Project</h1>
+    <div class="calculator">
+        <input type="text" class="input" readonly>
+        <div class="keys">
+            <div class="function">+</div>
+            <div class="key">7</div>
+            <div class="key">8</div>
+            <div class="key">9</div>
+            <div class="function">-</div>
+            <div class="key">4</div>
+            <div class="key">5</div>
+            <div class="key">6</div>
+            <div class="function">*</div>
+            <div class="key">1</div>
+            <div class="key">2</div>
+            <div class="key">3</div>
+            <div class="function">/</div>
+            <div class="key">0</div>
+            <div class="key">.</div>
+            <div class="key">=</div>
+            <div class="function">C</div>
+        </div>
+    </div>
+   
+</body>
+</html>

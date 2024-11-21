@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8</title>
+    <style>
+        .cards{
+            background-color: beige;
+            display: inline-grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: 30% 40% 30%; */
+            grid-template-columns: repeat(4, 250px);
+            grid-template-rows: 200px 200px;
+            /* gap: 30px; */
+            /* column-gap: 30px; */
+            /* row-gap: 50px; */
+        }
+        .card{
+            padding: 40px 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 800;
+            background-color: bisque;
+            margin: 5px;
+            color: orangered;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS grid display property</h2>
+    <!--
+        CSS grid is a powerful layout system, that uses a two dimensional grid-based system, which means we can affect the row and the column. It allows us create complex web layouts easily.
+    -->
+        <div class="cards">
+            <div class="card">Profile 1</div>
+            <div class="card">Profile 2</div>
+            <div class="card">Profile 3</div>
+            <div class="card">Profile 4</div>
+            <div class="card">Profile 5</div>
+            <div class="card">Profile 6</div>
+            <div class="card">Profile 7</div>
+            <div class="card">Profile 8</div>
+            <div class="card">Profile 9</div>
+            <div class="card">Profile 10</div>
+            <div class="card">Profile 11</div>
+            <div class="card">Profile 12</div>
+        </div>
+</body>
+</html>
